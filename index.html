@@ -2,43 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <header><h1>Splitter</h1></header>
+  <main>
+    <form id="form" class="form">
 
-  Bill
+      <label for="bill">Bill</label>
+      <input type="text" name="bill" id="bill">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <p>Select Tip %</p>
+      <div>
+        <div>
+          <label for="tip1">5%</label>
+          <input type="radio" name="tip" id="tip1" value="5">
+        </div>
+        <div>
+          <label for="tip2">10%</label>
+          <input type="radio" name="tip" id="tip2" value="10">
+        </div>
+        <div>
+          <label for="tip3">15%</label>
+          <input type="radio" name="tip" id="tip3" value="15">
+        </div>
+        <div>
+          <label for="tip4">25%</label>
+          <input type="radio" name="tip" id="tip4" value="25">
+        </div>
+        <div>
+          <label for="tip5">50%</label>
+          <input type="radio" name="tip" id="tip5" value="50">
+        </div>
+      </div>
 
-  Number of People
+      <label for="people">Number of People</label>
+      <input type="number" name="people" id="people">
 
-  Tip Amount
-  / person
+      <div>
 
-  Total
-  / person
+        <div>
+          <div>
+            <span>Tip Amount</span>
+            <span>/ person</span>
+          </div>
+          <span id="tip-amount">$4.27</span>
+        </div>
+          <div>
+            <span>Total</span>
+            <span>/ person</span>
+          </div>
+          <span id="total">$32.79</span>
+        </div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <input type="reset" value="reset">
+
+      </div>
+    </form>
+  </main>
+
+  <footer class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+    >. Coded by <a target="_blank" href="https://github.com/Anth029">Anthonely</a>.
+  </footer>
 </body>
 </html>
