@@ -1,14 +1,199 @@
-*{
+* {
   box-sizing: border-box;
+}
+
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan-1: hsl(186, 14%, 43%);
+  --dark-grayish-cyan-2: hsl(184, 14%, 56%);
+  --light-grayish-cyan-1: hsl(185, 41%, 84%);
+  --light-grayish-cyan-2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+
+  --border-radius: 1em;
+  --border-radius-input: .3em;
+  --margin-bottom-label: .5rem;
+  --margin-bottom-input: 1.8rem;
 }
 
 body {
   min-height: 100vh;
-  background-color: skyblue;
+  background-color: var(--light-grayish-cyan-1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+}
+
+.logo {
+  margin-bottom: 2em;
+}
+
+.form {
+  width: 375px;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 1.5em;
+}
+
+.form__label {
+  color: var(--dark-grayish-cyan-2);
+  font-weight: 700;
+  display: block;
+  margin-bottom: var(--margin-bottom-label);
+}
+
+.form__label--tip {
+  margin-top: 0;
+  margin-bottom: 1.2em;
+}
+
+.form__input {
+  color: var(--very-dark-cyan);
+  font-size: 28px;
+  font-weight: 700;
+  text-align: right;
+  padding-right: 0.5em;
+  width: 100%;
+  margin-bottom: var(--margin-bottom-input);
+  height: 1.5em;
+  border: none;
+  background-color: var(--light-grayish-cyan-2);
+}
+
+.form__input--bill {
+  background-image: url(images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: left 0.5em center;
+}
+
+.form__radio-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: var(--margin-bottom-input);
+}
+
+.form__radio-container > div {
+  flex: 1 1 40%;
+  position: relative;
+}
+
+.form__radio-container__input,
+.form__radio-container__custom {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: var(--border-radius-input);
+  background-color: var(--very-dark-cyan);
+  width: 100%;
+  height: 50px;
+  transition: background-color .2s;
+}
+
+.form__radio-container__input:hover {
+  background-color: var(--light-grayish-cyan-1);
+}
+
+.form__radio-container__input:checked {
+  background-color: var(--strong-cyan);
+}
+
+.form__radio-container__label {
+  color: var(--white);
+  font-size: 28px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15%;
+  transition: color .2s;
+}
+
+.form__radio-container__input:hover + .form__radio-container__label {
+  color: #000;
+}
+
+.form__radio-container__input:checked + .form__radio-container__label {
+  color: #000;
+}
+
+.form__radio-container__custom {
+  outline: none;
+  border: none;
+  text-align: right;
+  padding-right: 12px;
+  transition: border-width .4s;
+  background-color: var(--light-grayish-cyan-2);
+}
+
+.form__radio-container__custom, 
+.form__radio-container__custom::placeholder {
+  color: var(--dark-grayish-cyan-2);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.form__radio-container__custom {
+  color: var(--very-dark-cyan);
+}
+
+.form__radio-container__custom:focus {
+  border: 2px solid var(--strong-cyan);
+  border-radius: var(--border-radius-input);
+}
+
+.form__input--people {
+  background-image: url(images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: left 0.5em center;
+  margin-bottom: var(--margin-bottom-input);
+}
+
+.form__result {
+  border-radius: var(--border-radius);
+  background-color: var(--very-dark-cyan);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1.5em;
+  padding-top: 3em;
+  gap: 2em;
+}
+
+.form__result > * {
+  flex: 1 1 30%;
+}
+
+.form__result__neutral {
+  color: var(--white);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.form__result__ghost {
+  font-size: 12px;
+  color: var(--dark-grayish-cyan-2);
+}
+
+.form__result__big {
+  color: var(--strong-cyan);
+  font-size: 28px;
+  text-align: right;
+  font-weight: 700;
+}
+
+.form__result__reset {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  height: 2.8rem;
+  background-color: var(--strong-cyan);
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--border-radius-input);
 }
 
 .attribution {
