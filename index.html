@@ -20,40 +20,41 @@
   <main>
     <form id="form" class="form">
       <div>
-        <label class="form__label" for="bill">Bill</label>
-        <input class="form__input--bill form__input" type="text" name="bill" id="bill">
+        <div>
+          <label class="form__label" for="bill">Bill</label>
+          <input class="form__input--bill form__input" type="text" required name="bill" id="bill">
+        </div>
+
+        <p class="form__label form__label--tip">Select Tip %</p>
+        <div class="form__radio-container">
+          <div>
+            <input class="form__radio-container__input" id="tip1" type="radio" name="tip" value="5">
+            <label class="form__radio-container__label" for="tip1">5%</label>
+          </div>
+          <div>
+            <input class="form__radio-container__input" id="tip2" type="radio" name="tip" value="10">
+            <label class="form__radio-container__label" for="tip2">10%</label>
+          </div>
+          <div>
+            <input class="form__radio-container__input" id="tip3" type="radio" name="tip" value="15">
+            <label class="form__radio-container__label" for="tip3">15%</label>
+          </div>
+          <div>
+            <input class="form__radio-container__input" id="tip4" type="radio" name="tip" value="25">
+            <label class="form__radio-container__label" for="tip4">25%</label>
+          </div>
+          <div>
+            <input class="form__radio-container__input" id="tip5" type="radio" name="tip" value="50">
+            <label class="form__radio-container__label" for="tip5">50%</label>
+          </div>
+          <div>
+            <input class="form__radio-container__custom" id="custom" type="text" name="custom" placeholder="Custom">
+          </div>
+        </div>
+
+        <label class="form__label" for="people">Number of People</label>
+        <input class="form__input form__input--people" required type="text" name="people" id="people">
       </div>
-
-      <p class="form__label form__label--tip">Select Tip %</p>
-      <div class="form__radio-container">
-        <div>
-          <input class="form__radio-container__input" type="radio" name="tip" id="tip1" value="5">
-          <label class="form__radio-container__label" for="tip1">5%</label>
-        </div>
-        <div>
-          <input class="form__radio-container__input" type="radio" name="tip" id="tip2" value="10">
-          <label class="form__radio-container__label" for="tip2">10%</label>
-        </div>
-        <div>
-          <input class="form__radio-container__input" type="radio" name="tip" id="tip3" value="15">
-          <label class="form__radio-container__label" for="tip3">15%</label>
-        </div>
-        <div>
-          <input class="form__radio-container__input" type="radio" name="tip" id="tip4" value="25">
-          <label class="form__radio-container__label" for="tip4">25%</label>
-        </div>
-        <div>
-          <input class="form__radio-container__input" type="radio" name="tip" id="tip5" value="50">
-          <label class="form__radio-container__label" for="tip5">50%</label>
-        </div>
-        <div>
-          <input class="form__radio-container__custom" type="text" name="custom" id="custom" placeholder="Custom">
-        </div>
-      </div>
-
-      <label class="form__label" for="people">Number of People</label>
-      <input class="form__input form__input--people" type="number" name="people" id="people">
-
 
       <div class="form__result">
         <div>
@@ -66,7 +67,7 @@
           <span class="form__result__ghost">/ person</span>
         </div>
         <span class="form__result__big" id="total">$32.79</span>
-        <input class="form__result__reset" type="reset" value="reset">
+        <input class="form__result__reset" name="reset" disabled type="reset" value="reset">
       </div>
     </form>
   </main>
@@ -76,6 +77,7 @@
     <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
       target="_blank" href="https://github.com/Anth029">Anthonely</a>.
   </footer>
+  <script src="scripts.js"></script>
 </body>
 
 </html>
