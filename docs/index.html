@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="images/logo.svg" alt="Splitter">
+  </header>
+  <main>
+    <form id="form" class="form">
+      <div>
+        <div>
+          <label class="form__label" for="bill">Bill</label>
+          <input class="form__input--bill form__input" type="text" required name="bill" id="bill">
+        </div>
+
+        <p class="form__label form__label--tip">Select Tip %</p>
+        <div class="form__radio-container">
+          <div>
+            <input class="form__radio-container__input" id="tip1" type="radio" name="tip" value="5">
+            <label class="form__radio-container__label" for="tip1">5%</label>
+          </div>
+          <div>
+            <input class="form__radio-container__input" id="tip2" type="radio" name="tip" value="10">
+            <label class="form__radio-container__label" for="tip2">10%</label>
+          </div>
+          <div>
+            <input class="form__radio-container__input" id="tip3" type="radio" name="tip" value="15">
+            <label class="form__radio-container__label" for="tip3">15%</label>
+          </div>
+          <div>
+            <input class="form__radio-container__input" id="tip4" type="radio" name="tip" value="25">
+            <label class="form__radio-container__label" for="tip4">25%</label>
+          </div>
+          <div>
+            <input class="form__radio-container__input" id="tip5" type="radio" name="tip" value="50">
+            <label class="form__radio-container__label" for="tip5">50%</label>
+          </div>
+          <div>
+            <input class="form__radio-container__custom" id="custom" type="text" name="custom" placeholder="Custom">
+          </div>
+        </div>
+
+        <label class="form__label" for="people">Number of People</label>
+        <input class="form__input form__input--people" required type="text" name="people" id="people">
+      </div>
+
+      <div class="form__result">
+        <div>
+          <span class="form__result__neutral">Tip Amount</span>
+          <span class="form__result__ghost">/ person</span>
+        </div>
+        <span class="form__result__big" id="tip-amount">$0.00</span>
+        <div>
+          <span class="form__result__neutral">Total</span>
+          <span class="form__result__ghost">/ person</span>
+        </div>
+        <span class="form__result__big" id="total">$0.00</span>
+        <input class="form__result__reset" name="reset" disabled type="reset" value="reset">
+      </div>
+    </form>
+  </main>
+
+  <footer class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+      target="_blank" href="https://github.com/Anth029">Anthonely</a>.
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
